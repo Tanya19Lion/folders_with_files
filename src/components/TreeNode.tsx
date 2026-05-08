@@ -4,7 +4,7 @@ import { useState } from "react";
 import { File, Folder, FolderOpen } from "lucide-react";
 import Link from "next/link";
 import { FileNodeType } from "../types/fileSystemTypes";
-import { toSlug } from "@/utils/toSlug";
+import { toSlug } from "@/lib/toSlug";
 import FileTree from "./FileTree";
 
 type TreeNodeProps = {
@@ -33,6 +33,7 @@ const TreeNode = ({ name, node, currentPath }: TreeNodeProps) => {
                 <button 
                     onClick={() => setOpen(!open)}
                     className="flex items-center gap-2 text-cyan-600 cursor-pointer"
+                    aria-label="button to open folder structure"
                 >
                     {open ? <FolderOpen size={18} /> : <Folder size={18} />}
                 </button>

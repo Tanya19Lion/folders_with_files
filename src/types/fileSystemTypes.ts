@@ -6,7 +6,3 @@ export type FileNodeType = {
 };
 
 export type FileSystemType = Record<string, FileNodeType>;
-
-// export type FileTree = {
-//    root: FileSystemType;
-// };
