@@ -1,0 +1,1 @@
+export const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
